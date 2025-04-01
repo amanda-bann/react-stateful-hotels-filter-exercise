@@ -24,11 +24,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Filters selectedFilters={this.state.selectedFilters} />
+{/* // Pass a reference to the toggleFilter method from the App component to the Filters component */}
+        <Filters 
+        selectedFilters={this.state.selectedFilters}
+        toggleFilter={this.toggleFilter}
+        />
         <Hotels selectedFilters={this.state.selectedFilters} />
       </div>
     );
   }
 }
-
 export default App;
